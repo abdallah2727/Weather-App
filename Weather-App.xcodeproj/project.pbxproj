@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E6AB3252C7605D00089CD14 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6AB3242C7605D00089CD14 /* HomeViewModel.swift */; };
+		5E6AB32A2C76067D0089CD14 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6AB3292C76067D0089CD14 /* LocationService.swift */; };
+		5E6AB32E2C7646830089CD14 /* NetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6AB32D2C7646830089CD14 /* NetworkLayer.swift */; };
+		5E6AB3312C76491A0089CD14 /* WeatherResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6AB3302C76491A0089CD14 /* WeatherResponse.swift */; };
+		5E6AB3342C764B3C0089CD14 /* NetworkLayerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6AB3332C764B3C0089CD14 /* NetworkLayerProtocol.swift */; };
 		5E9C1C5E2C748F17001B6716 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9C1C5D2C748F17001B6716 /* AppDelegate.swift */; };
 		5E9C1C602C748F17001B6716 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E9C1C5F2C748F17001B6716 /* SceneDelegate.swift */; };
 		5E9C1C672C748F19001B6716 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E9C1C662C748F19001B6716 /* Assets.xcassets */; };
@@ -36,6 +41,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5E6AB3242C7605D00089CD14 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		5E6AB3292C76067D0089CD14 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		5E6AB32D2C7646830089CD14 /* NetworkLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayer.swift; sourceTree = "<group>"; };
+		5E6AB3302C76491A0089CD14 /* WeatherResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherResponse.swift; sourceTree = "<group>"; };
+		5E6AB3332C764B3C0089CD14 /* NetworkLayerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayerProtocol.swift; sourceTree = "<group>"; };
 		5E9C1C5A2C748F17001B6716 /* Weather-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Weather-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E9C1C5D2C748F17001B6716 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5E9C1C5F2C748F17001B6716 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +86,65 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E6AB3262C7605D60089CD14 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5E6AB3242C7605D00089CD14 /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5E6AB3272C7606590089CD14 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				5E6AB3322C76499A0089CD14 /* Constants */,
+				5E6AB32B2C76069B0089CD14 /* NetworkManger */,
+				5E6AB3282C7606630089CD14 /* LocationService */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		5E6AB3282C7606630089CD14 /* LocationService */ = {
+			isa = PBXGroup;
+			children = (
+				5E6AB3292C76067D0089CD14 /* LocationService.swift */,
+			);
+			path = LocationService;
+			sourceTree = "<group>";
+		};
+		5E6AB32B2C76069B0089CD14 /* NetworkManger */ = {
+			isa = PBXGroup;
+			children = (
+				5E6AB32D2C7646830089CD14 /* NetworkLayer.swift */,
+				5E6AB3332C764B3C0089CD14 /* NetworkLayerProtocol.swift */,
+			);
+			path = NetworkManger;
+			sourceTree = "<group>";
+		};
+		5E6AB32C2C7606FE0089CD14 /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				5E9C1C5D2C748F17001B6716 /* AppDelegate.swift */,
+				5E9C1C5F2C748F17001B6716 /* SceneDelegate.swift */,
+			);
+			path = Configs;
+			sourceTree = "<group>";
+		};
+		5E6AB32F2C7648D90089CD14 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5E6AB3302C76491A0089CD14 /* WeatherResponse.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5E6AB3322C76499A0089CD14 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 		5E9C1C512C748F17001B6716 = {
 			isa = PBXGroup;
 			children = (
@@ -99,9 +168,9 @@
 		5E9C1C5C2C748F17001B6716 /* Weather-App */ = {
 			isa = PBXGroup;
 			children = (
+				5E6AB32C2C7606FE0089CD14 /* Configs */,
+				5E6AB3272C7606590089CD14 /* Utilities */,
 				5E9C1C8D2C748F9C001B6716 /* Modules */,
-				5E9C1C5D2C748F17001B6716 /* AppDelegate.swift */,
-				5E9C1C5F2C748F17001B6716 /* SceneDelegate.swift */,
 				5E9C1C662C748F19001B6716 /* Assets.xcassets */,
 				5E9C1C682C748F19001B6716 /* LaunchScreen.storyboard */,
 				5E9C1C6B2C748F19001B6716 /* Info.plist */,
@@ -137,18 +206,11 @@
 		5E9C1C8E2C74913E001B6716 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				5E9C1C8F2C749159001B6716 /* Model */,
+				5E6AB32F2C7648D90089CD14 /* Model */,
 				5E9C1C902C749163001B6716 /* View */,
-				5E9C1C912C74918C001B6716 /* ViewModel */,
+				5E6AB3262C7605D60089CD14 /* ViewModel */,
 			);
 			path = Home;
-			sourceTree = "<group>";
-		};
-		5E9C1C8F2C749159001B6716 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		5E9C1C902C749163001B6716 /* View */ = {
@@ -158,13 +220,6 @@
 				5E9C1C932C7491DE001B6716 /* HomeViewController.xib */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		5E9C1C912C74918C001B6716 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,8 +353,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E6AB32E2C7646830089CD14 /* NetworkLayer.swift in Sources */,
 				5E9C1C5E2C748F17001B6716 /* AppDelegate.swift in Sources */,
 				5E9C1C602C748F17001B6716 /* SceneDelegate.swift in Sources */,
+				5E6AB3312C76491A0089CD14 /* WeatherResponse.swift in Sources */,
+				5E6AB32A2C76067D0089CD14 /* LocationService.swift in Sources */,
+				5E6AB3252C7605D00089CD14 /* HomeViewModel.swift in Sources */,
+				5E6AB3342C764B3C0089CD14 /* NetworkLayerProtocol.swift in Sources */,
 				5E9C1C942C7491DE001B6716 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -479,9 +539,10 @@
 				INFOPLIST_FILE = "Weather-App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -507,9 +568,10 @@
 				INFOPLIST_FILE = "Weather-App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
