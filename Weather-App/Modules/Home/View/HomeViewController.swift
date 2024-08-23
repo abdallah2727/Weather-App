@@ -9,7 +9,13 @@ import UIKit
 import Combine
 class HomeViewController: UIViewController {
 // MARK: - Outlets
+    @IBOutlet weak var searchCustomButton: CustomButton!
     @IBOutlet weak var ConditionsView: UIView!
+    @IBOutlet unowned var noConnectionImage: UIImageView!
+    @IBOutlet weak var WindImage: UIImageView!
+    @IBOutlet weak var seaLevelImage: UIImageView!
+    @IBOutlet weak var pressureImage: UIImageView!
+    @IBOutlet weak var humidImage: UIImageView!
     @IBOutlet weak var humid: UILabel!
     @IBOutlet weak var pressure: UILabel!
     @IBOutlet weak var seaLevel: UILabel!
@@ -20,28 +26,42 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var CityNameLabel: UILabel!
     
-// MARK: - Private proprties
-    private let vm = HomeViewModel()
+    @IBAction func GoToSearchVc(_ sender: Any) {
+        coordinator?.goToSearch()
+    }
+    // MARK: - proprties
+    let vm = HomeViewModel()
+    var search = false
+    var check = false
     private let input: PassthroughSubject <HomeViewModel.Input, Never> = .init()
     private var cancelablles = Set<AnyCancellable>()
+    weak var coordinator: MainCoordinator?
 // MARK: - ViewDidLoad & did appear
     override func viewDidLoad() {
         super.viewDidLoad()
-        if !NetworkMonitor.shared.isConnected {
-                   AlertManager.shared.showNoConnectionAlert(on: self)
-               }
+        searchCustomButton.setupButton(color: .lightGray, font: .headline, title: Constants.ButtonSearchContent)
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         bind()
+        checked()
+       
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        input.send(.viewDidAppear)
+        if search == false {input.send(.viewDidAppear)}
+        else {  
+            input.send(.citySearchedSent)
+        }
     }
 }
 // MARK: - VM Bind
 extension HomeViewController {
     func bind() {
+        check = true
+       if CheckConnection.shared.isNetworkAvailable() {
+           noConnectionImage.image = nil
         let output = vm.transformInputFromView(input: input.eraseToAnyPublisher())
-        
         output
             .receive(on: DispatchQueue.main)
             .sink(receiveCompletion: { completion in
@@ -49,7 +69,7 @@ extension HomeViewController {
                 case .finished:
                     break
                 case .failure(let error):
-                    print("Failed with error: \(error.localizedDescription)")
+                    print((error.localizedDescription))
                 }
             }, receiveValue: { [weak self] event in
                 switch event {
@@ -57,7 +77,7 @@ extension HomeViewController {
                     switch weatherResponse.weather[0].main  {
                     case Constants.WeatherCondition.clear.rawValue:
                         if weatherResponse.weather[0].icon.contains("n"){
-                            self?.backgroundImage.image = UIImage.night
+                            self?.setupNight()
                         }
                         else {
                             self?.backgroundImage.image = UIImage.clear
@@ -82,8 +102,46 @@ extension HomeViewController {
                     
                 case .fetchQuateDidFail(let error):
                     self?.CityNameLabel.text = error.localizedDescription
+                    self?.dismiss(animated: true)
+                    
                 }
             })
-            .store(in: &cancelablles)
+        .store(in: &cancelablles)}
+        else {
+            AlertManager.shared.showNoConnectionAlert(on:self)
+            noConnectionImage.image = UIImage.noConnection
+        }
+
     }
+    }
+// MARK: - VM Notify with city name
+extension HomeViewController{
+    func searchForNewCity(_ cityName: String) {
+        search = true
+        vm.city = cityName
+    }
+    func setupNight(){
+        self.backgroundImage.image = UIImage.night
+        self.CityNameLabel.textColor = .white
+        self.TempLabel.textColor = .white
+        self.humid.textColor = .white
+        self.weatherCondition.textColor = .white
+        self.wetherDesc.textColor = .white
+        self.pressure.textColor = .white
+        self.seaLevel.textColor = .white
+        self.wind.textColor = .white
+        self.humidImage.image = UIImage.humidW
+        self.WindImage.image = UIImage.windW
+        self.pressureImage.image = UIImage.pressureW
+        self.seaLevelImage.image = UIImage.seaLevelw
+       
+    }
+    func checked(){
+        if check == false {
+            self.dismiss(animated: true)
+            AlertManager.shared.showNoConnectionAlert(on:self)
+        }
+    }
+   
 }
+

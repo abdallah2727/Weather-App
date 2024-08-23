@@ -12,7 +12,6 @@ class AlertManager {
     
     private init() {}
 
-    // Show a basic alert with a title, message, and an optional button action
     func showAlert(on viewController: UIViewController, title: String, message: String, buttonTitle: String, buttonAction: (() -> Void)? = nil) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let action = UIAlertAction(title: buttonTitle, style: .default) { _ in

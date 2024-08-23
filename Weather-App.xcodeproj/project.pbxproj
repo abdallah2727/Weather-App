@@ -11,6 +11,32 @@
 		5E1C8ACD2C771C8D0014C6E2 /* UIView+Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1C8ACC2C771C8D0014C6E2 /* UIView+Extentions.swift */; };
 		5E1C8AD02C7735750014C6E2 /* CheckConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1C8ACF2C7735750014C6E2 /* CheckConnection.swift */; };
 		5E1C8AD32C7735DA0014C6E2 /* NoConnectionAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E1C8AD22C7735DA0014C6E2 /* NoConnectionAlert.swift */; };
+		5E593D102C7764E1006E69DE /* Reachability in Frameworks */ = {isa = PBXBuildFile; productRef = 5E593D0F2C7764E1006E69DE /* Reachability */; };
+		5E593D142C777086006E69DE /* SearchViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E593D132C777086006E69DE /* SearchViewController.xib */; };
+		5E593D152C777087006E69DE /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E593D122C777086006E69DE /* SearchViewController.swift */; };
+		5E593D192C77737E006E69DE /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E593D182C77737E006E69DE /* Coordinator.swift */; };
+		5E593D1B2C7773A7006E69DE /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E593D1A2C7773A7006E69DE /* MainCoordinator.swift */; };
+		5E593D322C779BF2006E69DE /* FWIPNSheetLocalize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E593D1C2C779BF2006E69DE /* FWIPNSheetLocalize.swift */; };
+		5E593D332C779BF2006E69DE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5E593D1E2C779BF2006E69DE /* Localizable.strings */; };
+		5E593D342C779BF2006E69DE /* SheetLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5E593D202C779BF2006E69DE /* SheetLocalizable.strings */; };
+		5E593D352C779BF2006E69DE /* FittedSheetsSetupFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E593D222C779BF2006E69DE /* FittedSheetsSetupFunction.swift */; };
+		5E593D362C779BF2006E69DE /* FWIPNCompatible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E593D232C779BF2006E69DE /* FWIPNCompatible.swift */; };
+		5E593D372C779BF2006E69DE /* FWIPNSheetContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E593D252C779BF2006E69DE /* FWIPNSheetContentViewController.swift */; };
+		5E593D382C779BF2006E69DE /* FWIPNSheetContentViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E593D262C779BF2006E69DE /* FWIPNSheetContentViewDelegate.swift */; };
+		5E593D392C779BF2006E69DE /* FWIPNSheetOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E593D272C779BF2006E69DE /* FWIPNSheetOptions.swift */; };
+		5E593D3A2C779BF2006E69DE /* FWIPNSheetSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E593D282C779BF2006E69DE /* FWIPNSheetSize.swift */; };
+		5E593D3B2C779BF2006E69DE /* FWIPNSheetTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E593D292C779BF2006E69DE /* FWIPNSheetTransition.swift */; };
+		5E593D3C2C779BF2006E69DE /* FWIPNSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E593D2A2C779BF2006E69DE /* FWIPNSheetView.swift */; };
+		5E593D3D2C779BF2006E69DE /* FWIPNSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E593D2B2C779BF2006E69DE /* FWIPNSheetViewController.swift */; };
+		5E593D3E2C779BF2006E69DE /* FWIPNSheetViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E593D2C2C779BF2006E69DE /* FWIPNSheetViewDelegate.swift */; };
+		5E593D3F2C779BF2006E69DE /* FWIPNUIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E593D2D2C779BF2006E69DE /* FWIPNUIViewControllerExtension.swift */; };
+		5E593D402C779BF2006E69DE /* InitialTouchPanGestureRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E593D2E2C779BF2006E69DE /* InitialTouchPanGestureRecognizer.swift */; };
+		5E593D412C779BF2006E69DE /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E593D2F2C779BF2006E69DE /* UIColorExtension.swift */; };
+		5E593D422C779BF2006E69DE /* Yalta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E593D302C779BF2006E69DE /* Yalta.swift */; };
+		5E593D482C77EA7A006E69DE /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E593D472C77EA7A006E69DE /* SearchViewModel.swift */; };
+		5E593D4C2C77F976006E69DE /* UrlValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E593D4B2C77F976006E69DE /* UrlValidation.swift */; };
+		5E593D4F2C77FB55006E69DE /* AlertBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E593D4E2C77FB55006E69DE /* AlertBuilder.swift */; };
+		5E593D522C780932006E69DE /* CustomUibutton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E593D512C780932006E69DE /* CustomUibutton.swift */; };
 		5E6AB3252C7605D00089CD14 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6AB3242C7605D00089CD14 /* HomeViewModel.swift */; };
 		5E6AB32A2C76067D0089CD14 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6AB3292C76067D0089CD14 /* LocationService.swift */; };
 		5E6AB32E2C7646830089CD14 /* NetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E6AB32D2C7646830089CD14 /* NetworkLayer.swift */; };
@@ -50,6 +76,32 @@
 		5E1C8ACC2C771C8D0014C6E2 /* UIView+Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extentions.swift"; sourceTree = "<group>"; };
 		5E1C8ACF2C7735750014C6E2 /* CheckConnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckConnection.swift; sourceTree = "<group>"; };
 		5E1C8AD22C7735DA0014C6E2 /* NoConnectionAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoConnectionAlert.swift; sourceTree = "<group>"; };
+		5E593D122C777086006E69DE /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		5E593D132C777086006E69DE /* SearchViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchViewController.xib; sourceTree = "<group>"; };
+		5E593D182C77737E006E69DE /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		5E593D1A2C7773A7006E69DE /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		5E593D1C2C779BF2006E69DE /* FWIPNSheetLocalize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FWIPNSheetLocalize.swift; sourceTree = "<group>"; };
+		5E593D1D2C779BF2006E69DE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		5E593D1F2C779BF2006E69DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/SheetLocalizable.strings; sourceTree = "<group>"; };
+		5E593D222C779BF2006E69DE /* FittedSheetsSetupFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FittedSheetsSetupFunction.swift; sourceTree = "<group>"; };
+		5E593D232C779BF2006E69DE /* FWIPNCompatible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FWIPNCompatible.swift; sourceTree = "<group>"; };
+		5E593D242C779BF2006E69DE /* FWIPNFittedSheetsPod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FWIPNFittedSheetsPod.h; sourceTree = "<group>"; };
+		5E593D252C779BF2006E69DE /* FWIPNSheetContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FWIPNSheetContentViewController.swift; sourceTree = "<group>"; };
+		5E593D262C779BF2006E69DE /* FWIPNSheetContentViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FWIPNSheetContentViewDelegate.swift; sourceTree = "<group>"; };
+		5E593D272C779BF2006E69DE /* FWIPNSheetOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FWIPNSheetOptions.swift; sourceTree = "<group>"; };
+		5E593D282C779BF2006E69DE /* FWIPNSheetSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FWIPNSheetSize.swift; sourceTree = "<group>"; };
+		5E593D292C779BF2006E69DE /* FWIPNSheetTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FWIPNSheetTransition.swift; sourceTree = "<group>"; };
+		5E593D2A2C779BF2006E69DE /* FWIPNSheetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FWIPNSheetView.swift; sourceTree = "<group>"; };
+		5E593D2B2C779BF2006E69DE /* FWIPNSheetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FWIPNSheetViewController.swift; sourceTree = "<group>"; };
+		5E593D2C2C779BF2006E69DE /* FWIPNSheetViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FWIPNSheetViewDelegate.swift; sourceTree = "<group>"; };
+		5E593D2D2C779BF2006E69DE /* FWIPNUIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FWIPNUIViewControllerExtension.swift; sourceTree = "<group>"; };
+		5E593D2E2C779BF2006E69DE /* InitialTouchPanGestureRecognizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialTouchPanGestureRecognizer.swift; sourceTree = "<group>"; };
+		5E593D2F2C779BF2006E69DE /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		5E593D302C779BF2006E69DE /* Yalta.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Yalta.swift; sourceTree = "<group>"; };
+		5E593D472C77EA7A006E69DE /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		5E593D4B2C77F976006E69DE /* UrlValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlValidation.swift; sourceTree = "<group>"; };
+		5E593D4E2C77FB55006E69DE /* AlertBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertBuilder.swift; sourceTree = "<group>"; };
+		5E593D512C780932006E69DE /* CustomUibutton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomUibutton.swift; sourceTree = "<group>"; };
 		5E6AB3242C7605D00089CD14 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		5E6AB3292C76067D0089CD14 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		5E6AB32D2C7646830089CD14 /* NetworkLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayer.swift; sourceTree = "<group>"; };
@@ -76,6 +128,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E593D102C7764E1006E69DE /* Reachability in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,6 +174,101 @@
 			path = Alerts;
 			sourceTree = "<group>";
 		};
+		5E593D112C776D4D006E69DE /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				5E593D462C77E888006E69DE /* ViewModel */,
+				5E593D122C777086006E69DE /* SearchViewController.swift */,
+				5E593D132C777086006E69DE /* SearchViewController.xib */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		5E593D162C77724D006E69DE /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				5E593D182C77737E006E69DE /* Coordinator.swift */,
+				5E593D1A2C7773A7006E69DE /* MainCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		5E593D212C779BF2006E69DE /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				5E593D1C2C779BF2006E69DE /* FWIPNSheetLocalize.swift */,
+				5E593D1E2C779BF2006E69DE /* Localizable.strings */,
+				5E593D202C779BF2006E69DE /* SheetLocalizable.strings */,
+			);
+			path = Localization;
+			sourceTree = "<group>";
+		};
+		5E593D312C779BF2006E69DE /* FittedSheets */ = {
+			isa = PBXGroup;
+			children = (
+				5E593D212C779BF2006E69DE /* Localization */,
+				5E593D222C779BF2006E69DE /* FittedSheetsSetupFunction.swift */,
+				5E593D232C779BF2006E69DE /* FWIPNCompatible.swift */,
+				5E593D242C779BF2006E69DE /* FWIPNFittedSheetsPod.h */,
+				5E593D252C779BF2006E69DE /* FWIPNSheetContentViewController.swift */,
+				5E593D262C779BF2006E69DE /* FWIPNSheetContentViewDelegate.swift */,
+				5E593D272C779BF2006E69DE /* FWIPNSheetOptions.swift */,
+				5E593D282C779BF2006E69DE /* FWIPNSheetSize.swift */,
+				5E593D292C779BF2006E69DE /* FWIPNSheetTransition.swift */,
+				5E593D2A2C779BF2006E69DE /* FWIPNSheetView.swift */,
+				5E593D2B2C779BF2006E69DE /* FWIPNSheetViewController.swift */,
+				5E593D2C2C779BF2006E69DE /* FWIPNSheetViewDelegate.swift */,
+				5E593D2D2C779BF2006E69DE /* FWIPNUIViewControllerExtension.swift */,
+				5E593D2E2C779BF2006E69DE /* InitialTouchPanGestureRecognizer.swift */,
+				5E593D2F2C779BF2006E69DE /* UIColorExtension.swift */,
+				5E593D302C779BF2006E69DE /* Yalta.swift */,
+			);
+			path = FittedSheets;
+			sourceTree = "<group>";
+		};
+		5E593D462C77E888006E69DE /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5E593D472C77EA7A006E69DE /* SearchViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5E593D492C77F956006E69DE /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				5E593D502C78090E006E69DE /* UIViewHelper */,
+				5E593D312C779BF2006E69DE /* FittedSheets */,
+				5E593D4D2C77FB40006E69DE /* AlertManger */,
+				5E593D4A2C77F95F006E69DE /* Methods */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		5E593D4A2C77F95F006E69DE /* Methods */ = {
+			isa = PBXGroup;
+			children = (
+				5E593D4B2C77F976006E69DE /* UrlValidation.swift */,
+			);
+			path = Methods;
+			sourceTree = "<group>";
+		};
+		5E593D4D2C77FB40006E69DE /* AlertManger */ = {
+			isa = PBXGroup;
+			children = (
+				5E593D4E2C77FB55006E69DE /* AlertBuilder.swift */,
+			);
+			path = AlertManger;
+			sourceTree = "<group>";
+		};
+		5E593D502C78090E006E69DE /* UIViewHelper */ = {
+			isa = PBXGroup;
+			children = (
+				5E593D512C780932006E69DE /* CustomUibutton.swift */,
+			);
+			path = UIViewHelper;
+			sourceTree = "<group>";
+		};
 		5E6AB3262C7605D60089CD14 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +280,7 @@
 		5E6AB3272C7606590089CD14 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				5E593D162C77724D006E69DE /* Coordinator */,
 				5E1C8AD12C7735B80014C6E2 /* Alerts */,
 				5E1C8ACE2C7735540014C6E2 /* CheckConnection */,
 				5E1C8AC92C7710470014C6E2 /* Extentions */,
@@ -207,6 +356,7 @@
 		5E9C1C5C2C748F17001B6716 /* Weather-App */ = {
 			isa = PBXGroup;
 			children = (
+				5E593D492C77F956006E69DE /* Helper */,
 				5E6AB32C2C7606FE0089CD14 /* Configs */,
 				5E6AB3272C7606590089CD14 /* Utilities */,
 				5E9C1C8D2C748F9C001B6716 /* Modules */,
@@ -237,6 +387,7 @@
 		5E9C1C8D2C748F9C001B6716 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				5E593D112C776D4D006E69DE /* Search */,
 				5E9C1C8E2C74913E001B6716 /* Home */,
 			);
 			path = Modules;
@@ -277,6 +428,9 @@
 			dependencies = (
 			);
 			name = "Weather-App";
+			packageProductDependencies = (
+				5E593D0F2C7764E1006E69DE /* Reachability */,
+			);
 			productName = "Weather-App";
 			productReference = 5E9C1C5A2C748F17001B6716 /* Weather-App.app */;
 			productType = "com.apple.product-type.application";
@@ -349,6 +503,9 @@
 				Base,
 			);
 			mainGroup = 5E9C1C512C748F17001B6716;
+			packageReferences = (
+				5E1C8AD42C77634B0014C6E2 /* XCRemoteSwiftPackageReference "Reachability" */,
+			);
 			productRefGroup = 5E9C1C5B2C748F17001B6716 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -365,8 +522,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E593D332C779BF2006E69DE /* Localizable.strings in Resources */,
+				5E593D342C779BF2006E69DE /* SheetLocalizable.strings in Resources */,
 				5E9C1C672C748F19001B6716 /* Assets.xcassets in Resources */,
 				5E9C1C6A2C748F19001B6716 /* Base in Resources */,
+				5E593D142C777086006E69DE /* SearchViewController.xib in Resources */,
 				5E9C1C952C7491DE001B6716 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -392,19 +552,41 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E593D482C77EA7A006E69DE /* SearchViewModel.swift in Sources */,
 				5E6AB32E2C7646830089CD14 /* NetworkLayer.swift in Sources */,
+				5E593D352C779BF2006E69DE /* FittedSheetsSetupFunction.swift in Sources */,
 				5E9C1C5E2C748F17001B6716 /* AppDelegate.swift in Sources */,
+				5E593D372C779BF2006E69DE /* FWIPNSheetContentViewController.swift in Sources */,
+				5E593D192C77737E006E69DE /* Coordinator.swift in Sources */,
 				5E9C1C602C748F17001B6716 /* SceneDelegate.swift in Sources */,
+				5E593D382C779BF2006E69DE /* FWIPNSheetContentViewDelegate.swift in Sources */,
 				5E6AB3312C76491A0089CD14 /* WeatherResponse.swift in Sources */,
 				5E6AB32A2C76067D0089CD14 /* LocationService.swift in Sources */,
+				5E593D362C779BF2006E69DE /* FWIPNCompatible.swift in Sources */,
+				5E593D4F2C77FB55006E69DE /* AlertBuilder.swift in Sources */,
+				5E593D3A2C779BF2006E69DE /* FWIPNSheetSize.swift in Sources */,
 				5E1C8AD32C7735DA0014C6E2 /* NoConnectionAlert.swift in Sources */,
 				5E1C8ACD2C771C8D0014C6E2 /* UIView+Extentions.swift in Sources */,
+				5E593D4C2C77F976006E69DE /* UrlValidation.swift in Sources */,
 				5E1C8AD02C7735750014C6E2 /* CheckConnection.swift in Sources */,
+				5E593D522C780932006E69DE /* CustomUibutton.swift in Sources */,
+				5E593D422C779BF2006E69DE /* Yalta.swift in Sources */,
+				5E593D392C779BF2006E69DE /* FWIPNSheetOptions.swift in Sources */,
+				5E593D1B2C7773A7006E69DE /* MainCoordinator.swift in Sources */,
+				5E593D152C777087006E69DE /* SearchViewController.swift in Sources */,
+				5E593D412C779BF2006E69DE /* UIColorExtension.swift in Sources */,
+				5E593D3F2C779BF2006E69DE /* FWIPNUIViewControllerExtension.swift in Sources */,
+				5E593D3C2C779BF2006E69DE /* FWIPNSheetView.swift in Sources */,
 				5E6AB3252C7605D00089CD14 /* HomeViewModel.swift in Sources */,
+				5E593D322C779BF2006E69DE /* FWIPNSheetLocalize.swift in Sources */,
 				5E1C8ACB2C77106C0014C6E2 /* DataTypes+Extentions.swift in Sources */,
 				5E6AB3342C764B3C0089CD14 /* NetworkLayerProtocol.swift in Sources */,
+				5E593D3E2C779BF2006E69DE /* FWIPNSheetViewDelegate.swift in Sources */,
+				5E593D3B2C779BF2006E69DE /* FWIPNSheetTransition.swift in Sources */,
+				5E593D3D2C779BF2006E69DE /* FWIPNSheetViewController.swift in Sources */,
 				5E6AB3362C768E550089CD14 /* Constatns.swift in Sources */,
 				5E9C1C942C7491DE001B6716 /* HomeViewController.swift in Sources */,
+				5E593D402C779BF2006E69DE /* InitialTouchPanGestureRecognizer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,6 +623,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		5E593D1E2C779BF2006E69DE /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5E593D1D2C779BF2006E69DE /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		5E593D202C779BF2006E69DE /* SheetLocalizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5E593D1F2C779BF2006E69DE /* Base */,
+			);
+			name = SheetLocalizable.strings;
+			sourceTree = "<group>";
+		};
 		5E9C1C682C748F19001B6716 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -745,6 +943,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5E1C8AD42C77634B0014C6E2 /* XCRemoteSwiftPackageReference "Reachability" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ashleymills/Reachability.swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5E593D0F2C7764E1006E69DE /* Reachability */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5E1C8AD42C77634B0014C6E2 /* XCRemoteSwiftPackageReference "Reachability" */;
+			productName = Reachability;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5E9C1C522C748F17001B6716 /* Project object */;
 }

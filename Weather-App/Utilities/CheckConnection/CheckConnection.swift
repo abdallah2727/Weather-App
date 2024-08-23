@@ -6,19 +6,37 @@
 //
 
 import Foundation
-import UIKit
-import Network
-public class NetworkMonitor {
-    static let shared = NetworkMonitor()
-    private let monitor = NWPathMonitor()
-    private let queue = DispatchQueue.global()
+import Reachability
 
-    var isConnected: Bool = false
+class CheckConnection {
+    static let shared = CheckConnection()
+    private var reachability: Reachability?
 
-    private init() {
-        monitor.pathUpdateHandler = { path in
-            self.isConnected = path.status == .satisfied
-        }
-        monitor.start(queue: queue)
-    }
+      private init() {
+          setupReachability()
+      }
+
+      private func setupReachability() {
+          do {
+              reachability = try Reachability()
+              reachability?.whenReachable = { reachability in
+                  if reachability.connection == .wifi {
+                      print("Reachable via WiFi")
+                  } else if reachability.connection == .cellular {
+                      print("Reachable via Cellular")
+                  }
+              }
+              reachability?.whenUnreachable = { _ in
+                  print("Not reachable")
+              }
+
+              try reachability?.startNotifier()
+          } catch {
+              print("Unable to start notifier")
+          }
+      }
+
+      func isNetworkAvailable() -> Bool {
+          return reachability?.connection != .unavailable
+      }
 }

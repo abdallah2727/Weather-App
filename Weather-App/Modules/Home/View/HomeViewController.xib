@@ -19,10 +19,16 @@
                 <outlet property="CityNameLabel" destination="d8m-WC-kAp" id="gmA-SI-C8S"/>
                 <outlet property="ConditionsView" destination="4wJ-qr-5cz" id="43o-g8-JpL"/>
                 <outlet property="TempLabel" destination="UxO-kC-Vsv" id="Lu2-vD-1aU"/>
+                <outlet property="WindImage" destination="T7h-gH-Xfg" id="oed-6r-k8y"/>
                 <outlet property="backgroundImage" destination="b36-ms-j43" id="mjt-UX-nuQ"/>
                 <outlet property="humid" destination="AXH-7S-2b3" id="ZZN-cB-eIY"/>
+                <outlet property="humidImage" destination="a9B-2w-Eui" id="erA-9c-Zh9"/>
+                <outlet property="noConnectionImage" destination="gzy-J4-lCD" id="rZS-bU-FEc"/>
                 <outlet property="pressure" destination="E7h-R8-oCP" id="8M7-Fc-TUC"/>
+                <outlet property="pressureImage" destination="nS1-xK-DRC" id="qvl-Au-LQS"/>
                 <outlet property="seaLevel" destination="fU9-QX-PVA" id="3ss-4y-ZHc"/>
+                <outlet property="seaLevelImage" destination="zoF-R4-yjk" id="3If-iQ-OK7"/>
+                <outlet property="searchCustomButton" destination="02E-C0-XeZ" id="BKw-U6-bYS"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="weatherCondition" destination="BXF-Xo-i0K" id="n6o-gt-CmV"/>
                 <outlet property="wetherDesc" destination="gQa-n0-Mf6" id="pPv-xc-4jN"/>
@@ -181,10 +187,13 @@
                                         </userDefinedRuntimeAttribute>
                                     </userDefinedRuntimeAttributes>
                                 </view>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="02E-C0-XeZ">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="02E-C0-XeZ" customClass="CustomButton" customModule="Weather_App" customModuleProvider="target">
                                     <rect key="frame" x="20" y="559.66666666666663" width="353" height="39"/>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain" title="Search for Another city"/>
+                                    <connections>
+                                        <action selector="GoToSearchVc:" destination="-1" eventType="touchUpInside" id="UMk-Gu-QRF"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <constraints>
@@ -212,7 +221,7 @@
                         <constraint firstAttribute="trailing" secondItem="GTU-Q8-Aji" secondAttribute="trailing" id="qDF-gm-XBm"/>
                     </constraints>
                 </view>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gzy-J4-lCD">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gzy-J4-lCD">
                     <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                 </imageView>
             </subviews>
@@ -238,6 +247,13 @@
             </constraints>
             <point key="canvasLocation" x="43.511450381679388" y="19.718309859154932"/>
         </view>
+        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="mRn-zO-ViD">
+            <rect key="frame" x="0.0" y="0.0" width="75" height="39"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <state key="normal" title="Button"/>
+            <buttonConfiguration key="configuration" style="plain" title="Button"/>
+            <point key="canvasLocation" x="924" y="-562"/>
+        </button>
     </objects>
     <resources>
         <image name="Blue Sky-2" width="736" height="1308"/>
