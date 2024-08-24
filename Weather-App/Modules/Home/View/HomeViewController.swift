@@ -32,20 +32,14 @@ class HomeViewController: UIViewController {
     // MARK: - proprties
     let vm = HomeViewModel()
     var search = false
-    var check = false
     private let input: PassthroughSubject <HomeViewModel.Input, Never> = .init()
     private var cancelablles = Set<AnyCancellable>()
     weak var coordinator: MainCoordinator?
 // MARK: - ViewDidLoad & did appear
     override func viewDidLoad() {
         super.viewDidLoad()
-        searchCustomButton.setupButton(color: .lightGray, font: .headline, title: Constants.ButtonSearchContent)
-    }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
         bind()
-        checked()
-       
+        searchCustomButton.setupButton(color: .lightGray, font: .headline, title: Constants.ButtonSearchContent)
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -58,8 +52,8 @@ class HomeViewController: UIViewController {
 // MARK: - VM Bind
 extension HomeViewController {
     func bind() {
-        check = true
        if CheckConnection.shared.isNetworkAvailable() {
+           let (blurEffectView, activityIndicator) = showLoadingIndicatorWithBlur()
            noConnectionImage.image = nil
         let output = vm.transformInputFromView(input: input.eraseToAnyPublisher())
         output
@@ -77,6 +71,7 @@ extension HomeViewController {
                     switch weatherResponse.weather[0].main  {
                     case Constants.WeatherCondition.clear.rawValue:
                         if weatherResponse.weather[0].icon.contains("n"){
+                            self?.backgroundImage.image = UIImage.night
                             self?.setupNight()
                         }
                         else {
@@ -84,6 +79,7 @@ extension HomeViewController {
                         }
                     case Constants.WeatherCondition.rain.rawValue:
                         self?.backgroundImage.image = UIImage.rain
+                        self?.setupNight()
                     case Constants.WeatherCondition.clouds.rawValue:
                         self?.backgroundImage.image = UIImage.clouds
                         self?.ConditionsView.backgroundColor = UIColor.clear
@@ -99,7 +95,7 @@ extension HomeViewController {
                     self?.pressure.text = String(weatherResponse.main.pressure)
                     self?.seaLevel.text = String(weatherResponse.main.seaLevel)
                     self?.wind.text = String(weatherResponse.wind.deg)+Constants.km
-                    
+                    self?.hideLoadingIndicatorWithBlur(blurEffectView: blurEffectView, activityIndicator: activityIndicator)
                 case .fetchQuateDidFail(let error):
                     self?.CityNameLabel.text = error.localizedDescription
                     self?.dismiss(animated: true)
@@ -110,6 +106,7 @@ extension HomeViewController {
         else {
             AlertManager.shared.showNoConnectionAlert(on:self)
             noConnectionImage.image = UIImage.noConnection
+            searchCustomButton.isEnabled = false
         }
 
     }
@@ -121,7 +118,7 @@ extension HomeViewController{
         vm.city = cityName
     }
     func setupNight(){
-        self.backgroundImage.image = UIImage.night
+
         self.CityNameLabel.textColor = .white
         self.TempLabel.textColor = .white
         self.humid.textColor = .white
@@ -135,12 +132,6 @@ extension HomeViewController{
         self.pressureImage.image = UIImage.pressureW
         self.seaLevelImage.image = UIImage.seaLevelw
        
-    }
-    func checked(){
-        if check == false {
-            self.dismiss(animated: true)
-            AlertManager.shared.showNoConnectionAlert(on:self)
-        }
     }
    
 }
