@@ -9,7 +9,7 @@ import Foundation
 import CoreLocation
 import Combine
 class HomeViewModel{
-// MARK: - Private proprties
+    // MARK: - Private proprties
     private let locationService = LocationService()
     private let getApiData:NetworkLayerProtocol
     private let output: PassthroughSubject< Output ,Never> = .init()
@@ -29,7 +29,7 @@ class HomeViewModel{
         case fetchQuateDidFail (error:Error)
         case fetchQuateDidSucceed (data:WeatherResponse)
     }
-// MARK: - init & ViewDidload
+    // MARK: - init & ViewDidload
     init(getApiData:NetworkLayerProtocol=NetworkLayer()){
         self.getApiData = getApiData
     }
@@ -40,7 +40,7 @@ extension HomeViewModel:LocationServiceDelegate{
         let url = Constants.getUrlUsingCoord(lat: latitude, lon: longitude)
         getDataFromAPi(url: url)
     }
-
+    
     func didFailWithError(_ error: any Error) {
         print("Failed to get location: \(error.localizedDescription)")
     }
@@ -59,7 +59,7 @@ extension HomeViewModel{
                     if let city = self.city {
                         self.handleGetWeatherSearched(outputPublisher: outputPublisher, city: city)
                     }
-
+                    
                 case .viewDidAppear:
                     if !self.isDataFetched {
                         self.handleGetWeather(outputPublisher: outputPublisher)
@@ -71,38 +71,38 @@ extension HomeViewModel{
         
         return outputPublisher.eraseToAnyPublisher()}
     private func handleGetWeather(outputPublisher: PassthroughSubject<Output, Never>) {
-                   locationService.delegate = self
-                   locationService.initializeLocationManager()
-               
+        locationService.delegate = self
+        locationService.initializeLocationManager()
+        
         $weather
-             .compactMap { $0 }
-             .map { Output.fetchQuateDidSucceed(data: $0) }
-             .subscribe(outputPublisher)
-             .store(in: &cancellables)
-
-         
-       
+            .compactMap { $0 }
+            .map { Output.fetchQuateDidSucceed(data: $0) }
+            .subscribe(outputPublisher)
+            .store(in: &cancellables)
+        
+        
+        
     }
-     func handleGetWeatherSearched(outputPublisher: PassthroughSubject<Output, Never>,city:String) {
+    func handleGetWeatherSearched(outputPublisher: PassthroughSubject<Output, Never>,city:String) {
         updateWeatherForSearchedCity(city)
         $weather
-             .compactMap { $0 }
-             .map { Output.fetchQuateDidSucceed(data: $0) }
-             .subscribe(outputPublisher)
-             .store(in: &cancellables)
+            .compactMap { $0 }
+            .map { Output.fetchQuateDidSucceed(data: $0) }
+            .subscribe(outputPublisher)
+            .store(in: &cancellables)
         
-         
-       
+        
+        
     }
-    }
+}
 // MARK: - detect and update searched city
 extension HomeViewModel{
     
     func updateWeatherForSearchedCity(_ city: String) {
         let url = Constants.getUrlUsingcityname(city: city)
-          getDataFromAPi(url: url)
-   
-      }
+        getDataFromAPi(url: url)
+        
+    }
     func getDataFromAPi(url:String){
         let url = URL(string:url)
         isSearchSuccessful = true

@@ -25,26 +25,25 @@ class SearchViewController: UIViewController {
         guard let cityName = searchTextField.text, !cityName.isEmpty else {
             AlertBuilder.showAlert(on: self, message:Constants.AlertMessages.enterData.rawValue)
             return
-          }
-          
-          let viewModel = SearchViewModel()
-          viewModel.validateCityURL(cityName: cityName) { isValid in
-              DispatchQueue.main.async {
-                  if isValid {
-                      let homeVC = HomeViewController()
-                      homeVC.searchForNewCity(cityName)
-                      homeVC.search = true
-                      let sheetViewController = FWIPNSheetViewController(controller: homeVC, sizes: [.percent(0.9)])
-                      sheetViewController.gripSize = CGSize(width: 70, height: 6)
-                      self.present(sheetViewController, animated: true)
-                  } else {
-                      AlertBuilder.showAlert(on: self, message: Constants.AlertMessages.enterValidData.rawValue)
-                  }
-              }
-          }
-                              }
-           
-
+        }
+        vm.validateCityURL(cityName: cityName) { isValid in
+            DispatchQueue.main.async {
+                if isValid {
+                    let homeVC = HomeViewController()
+                    homeVC.searchForNewCity(cityName)
+                    let sheetViewController = FWIPNSheetViewController(controller: homeVC, sizes: [.percent(0.9)])
+                    sheetViewController.gripSize = CGSize(width: 70, height: 6)
+                    self.present(sheetViewController, animated: true)
+                    homeVC.searchCustomButton.isHidden = true
+                    
+                } else {
+                    AlertBuilder.showAlert(on: self, message: Constants.AlertMessages.enterValidData.rawValue)
+                }
+            }
+        }
+    }
+    
+    
 
 
 
